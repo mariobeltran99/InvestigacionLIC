@@ -4,54 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas y bootstrap</title>
+    <title>Aplicacion de REGEX</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/validaciones.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="container">
-        <div class="row my-2">
-            <canvas id="popChart" width="600" height="400"></canvas>
-        </div>
+        <br><br>
+        <form class="formularios">
+            <div class="form-group">
+                <label for="">Regex para NIT</label>
+                <input type="text" class="form-control" id="nit" onkeyup="funcion('nit')">
+                <small id="nita" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group">
+                <label for="">Regex para Tarjeta de credito</label>
+                <input type="text" class="form-control" id="tarjeta" onkeyup="funcion('tarjeta')">
+                <small id="tarjetaa" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group">
+                <label for="">Regex para email</label>
+                <input type="text" class="form-control" id="email" onkeyup="funcion('email')">
+                <small id="emaila" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group">
+                <label for="">Regex para nombre de usuario</label>
+                <input type="text" class="form-control" id="user" onkeyup="funcion('user')">
+                <small id="usera" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group">
+                <label for="">Regex para un nombre, un apellido</label>
+                <input type="text" class="form-control" id="nc" onkeyup="funcion('nc')">
+                <small id="nca" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group">
+                <label for="">Regex para Numero telefonico</label>
+                <input type="text" class="form-control" id="numero" onkeyup="funcion('numero')">
+                <small id="numeroa" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group">
+                <label for="">Regex para cualquier letra del teclado y nombres internacionales</label>
+                <input type="text" class="form-control" id="letras" onkeyup="funcion('letras')">
+                <small id="letrasa" class="form-text text-muted">No cumple</small>
+            </div>
+            <div class="form-group mb-2 mr-sm-2">
+                <label for="">Regex para solo números</label> <br>
+                <input type="text" class="form-control" id="numeros" onkeyup="funcion('numeros')">
+                <small id="numerosa" class="form-text text-muted">No cumple</small>
+            </div>
+            <br><br>
+        </form>
     </div>
-    <script>
-        var popCanvas = document.getElementById("popChart").getContext("2d");
-        var barChart = new Chart(popCanvas, {
-            type: 'bar',
-            data: {
-                labels: ["China", "India", "Estados unidos", "Indonesia", "Brasil", "Pakistan", "Nigeria", "Bangladesh", "Rusia", "Japón"],
-                datasets: [{
-                    label: 'Población',
-                    data: [1379302771, 1281935911, 326625791, 260580739, 207353391, 204924861, 190632261, 157826578, 142257519, 126451398],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(255, 159, 64, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)'
-                    ]
-                }]
-            }
-        });
-    </script>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
 
 </html>

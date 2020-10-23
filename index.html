@@ -1,64 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicacion de REGEX</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obteniendo datos de una API Rest</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/validaciones.js"></script>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
-    <div class="container">
-        <br><br>
-        <form class="formularios">
-            <div class="form-group">
-                <label for="">Regex para NIT</label>
-                <input type="text" class="form-control" id="nit" onkeyup="funcion('nit')" placeholder="Ejemplo: 1254-230498-876-2">
-                <small id="nita" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group">
-                <label for="">Regex para Tarjeta de credito</label>
-                <input type="text" class="form-control" id="tarjeta" onkeyup="funcion('tarjeta')" placeholder="Ejemplo: 3542-2312-2312-4543">
-                <small id="tarjetaa" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group">
-                <label for="">Regex para email</label>
-                <input type="text" class="form-control" id="email" onkeyup="funcion('email')" placeholder="Ejemplo: usuario@servidor.com">
-                <small id="emaila" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group">
-                <label for="">Regex para nombre de usuario</label>
-                <input type="text" class="form-control" id="user" onkeyup="funcion('user')" placeholder="Ejemplo: Fhacker">
-                <small id="usera" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group">
-                <label for="">Regex para un nombre, un apellido</label>
-                <input type="text" class="form-control" id="nc" onkeyup="funcion('nc')" placeholder="Ejemplo: Delmy Corpeño">
-                <small id="nca" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group">
-                <label for="">Regex para Numero telefonico (celular o linea fija)</label>
-                <input type="text" class="form-control" id="numero" onkeyup="funcion('numero')" placeholder="Ejemplo: 6299-1233 | 7622-1222 | 2223-2733">
-                <small id="numeroa" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group">
-                <label for="">Regex para cualquier letra del teclado y nombres internacionales</label>
-                <input type="text" class="form-control" id="letras" onkeyup="funcion('letras')" placeholder="Ejemplo: Agüero">
-                <small id="letrasa" class="form-text text-muted">No cumple</small>
-            </div>
-            <div class="form-group mb-2 mr-sm-2">
-                <label for="">Regex para solo números</label> <br>
-                <input type="text" class="form-control" id="numeros" onkeyup="funcion('numeros')" placeholder="Ejemplo: 667">
-                <small id="numerosa" class="form-text text-muted">No cumple</small>
-            </div>
-            <br><br>
-        </form>
+  <body>
+    <div class="container space">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="title">Tabla Productos</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Existencias</th>
+              </tr>
+            </thead>
+            <tbody id="result"></tbody>
+          </table>
+          <br>
+          <br>
+          <p>API Rest con Node JS  <a href="https://api-node-products.herokuapp.com/products" target="_blank">aquí</a></p>
+          <p>Repositorio de la API Rest con Node JS  <a href="https://github.com/mariobeltran99/Api_Rest_NodeJS" target="_blank">aquí</a></p>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
